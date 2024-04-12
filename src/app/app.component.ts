@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { CabecalhoComponent } from "./cabecalho/cabecalho.component";
-import { RodapeComponent } from "./rodape/rodape.component";
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { CabecalhoComponent } from "./components/cabecalho/cabecalho.component";
+import { RodapeComponent } from "./components/rodape/rodape.component";
 
 @Component({
     selector: 'app-root',
