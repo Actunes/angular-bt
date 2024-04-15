@@ -3,7 +3,7 @@ import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inici
 import { VisualizarTarefasComponent } from './components/visualizar-tarefas/visualizar-tarefas.component';
 
 export const routes: Routes = [
-    {path: "", redirectTo: "pagina-inicial", pathMatch: 'full'},
-    {path: "pagina-inicial", component: PaginaInicialComponent},
-    {path: "visualizar-tarefas", component: VisualizarTarefasComponent}
+    {path: "", redirectTo: "home", pathMatch: 'full'},
+    {path: "home", component: PaginaInicialComponent},
+    {path: "tasks", component: VisualizarTarefasComponent}
 ];

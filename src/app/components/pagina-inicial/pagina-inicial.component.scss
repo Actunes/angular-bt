@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+*{
+    font-family: Roboto Condensed;
+}
+
+.first-square{
+    background-color: #141414;
+    border-radius: 21px;
+}
+
+.list-group-item{
+    background-color: #44475A;
+    color: white;
+}
+
+.list-group-item:first-child {
+    border-radius: 21px 21px 0px 0px;
+    padding-top: 20px;
+}
+
+.list-group-item:last-child {
+    border-radius: 0px 0px 21px 21px;
+    padding-bottom: 20px;
+}
+
