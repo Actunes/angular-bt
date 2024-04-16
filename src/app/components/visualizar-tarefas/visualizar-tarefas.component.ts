@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TarefaService } from '../../app-core/services/tarefa-services';
+declare var $ : any;
 
 @Component({
   selector: 'app-visualizar-tarefas',
@@ -20,7 +21,15 @@ export class VisualizarTarefasComponent {
     this.tarefaService.addTarefa("tarefa" + this.i)
 
     this.i ++
+  }
 
+  openModal(){
+    $('addTarefa').modal('show')
+
+  }
+
+  closeModal(){
+    $('closeModal').modal('hide')
   }
 
 }
