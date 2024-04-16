@@ -40,18 +40,35 @@
   </table>
 </div>
 
-<div class="modal" tabindex="-1" id="addTarefa">
+<div class="modal" tabIndex="-1" id="addTarefa">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title">Adicionar nova tarefa</h1>
+        <h5 class="modal-title">Adicionar nova tarefa</h5>
       </div>
       <div class="modal-body">
-        <h1>Aqui vai nosso formulário de cadastro</h1>
+        
+        <form>
+          <div class="form-row">
+            <div class="mb-3 col-md-12">
+              <label for="tituloTarefa" class="form-label">Titulo Tarefa</label>
+              <input type="text" class="form-control" id="tituloTarefa">
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="dataInicio" class="form-label">Data do Inicio</label>
+              <input type="datetime-local" class="form-control" id="dataInicio">
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="dataConclusao" class="form-label">Data de conclusão</label>
+              <input type="datetime-local" class="form-control" id="dataConclusao">
+            </div>
+          </div>
+        </form>
+
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-bs-dimiss="modal" (click)="closeModal()">Fechar</button>
-        <button class="btn btn-sucess" type="button" (click)="addTarefa()">Salvar</button>
+        <button class="btn btn-success" type="button" (click)="addTarefa()">Salvar</button>
       </div>
     </div>
   </div>

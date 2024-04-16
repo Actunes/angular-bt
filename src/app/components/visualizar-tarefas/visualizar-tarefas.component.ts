@@ -23,13 +23,12 @@ export class VisualizarTarefasComponent {
     this.i ++
   }
 
-  openModal(){
-    $('addTarefa').modal('show')
-
+  openModal() {
+   $('#addTarefa').modal('show');
   }
 
   closeModal(){
-    $('closeModal').modal('hide')
+    $('#addTarefa').modal('hide')
   }
 
 }
