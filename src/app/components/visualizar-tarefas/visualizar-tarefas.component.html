@@ -16,21 +16,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Estudar Bootstrap</td>
-        <td>05/04/2024</td>
-        <td>Em andamento</td>
-        <td>
-          <button class="btn btn-danger rounded-circle"><i class="fas fa-trash-alt"></i></button>
-          <button class="btn btn-warning ml-2 rounded-circle"><i class="fas fa-edit"></i></button>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Fazer exercícios</td>
-        <td>09/04/2024</td>
-        <td>Pendente</td>
+      <tr *ngFor="let t of tarefa; let i = index">
+        <th scope="row">{{ i }}</th>
+        <td>{{ t.titulo }}</td>
+        <td>{{ t.dataInicio }}</td>
+        <td>{{ t.status.status }}</td>
         <td>
           <button class="btn btn-danger rounded-circle"><i class="fas fa-trash-alt"></i></button>
           <button class="btn btn-warning ml-2 rounded-circle"><i class="fas fa-edit"></i></button>
@@ -62,6 +52,20 @@
               <label for="dataConclusao" class="form-label">Data de conclusão</label>
               <input type="datetime-local" class="form-control" id="dataConclusao">
             </div>
+            <div class="md-3 col">
+              <label>Status</label>
+              <select class="form-control">
+                <option value="nova">Nova</option>
+                <option value="em_andamento">Em andamento</option>
+                <option value="concluida">Concluida</option>
+              </select>
+            </div>
+            <div class="mb-12 col-md-12">
+              <label class="form-check-label">
+                Descrição tarefa
+              </label>
+              <textarea class="form-control" name="" id="descricaoTarefa" rows="3"></textarea>
+            </div>
           </div>
         </form>
 
@@ -72,4 +76,9 @@
       </div>
     </div>
   </div>
+</div>
+
+<div *ngIf = "false" class="d-flex justify-content-center">
+  <i class="fas fa-spinner fa-spin fa-3x fs-fs"></i> 
+  <h3>Carregando...</h3> 
 </div>
